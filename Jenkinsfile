@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                sh 'python3 main_app.py'
+                sh 'python3 main.py'
             }
         }
 
