@@ -17,7 +17,8 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
-                python3 -m pip install pytest || true
+                python3 -m pip install --user pytest
+                export PATH=$HOME/.local/bin:$PATH
                 pytest
                 '''
             }
